@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70EB5C32-A727-4E39-88B5-8436914011B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Canvas.Controls.Example</RootNamespace>
+    <AssemblyName>Canvas.Controls.Example</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\DevRelease\bin.debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Canvas.Helpers">
+      <HintPath>..\..\..\..\..\DevRelease\bin.debug\Canvas.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Canvas.Shared">
+      <HintPath>..\..\..\..\..\DevRelease\bin.debug\Canvas.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CygNet.API.Cache">
+      <HintPath>..\..\..\..\..\DevRelease\bin.debug\CygNet.API.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="CygNet.API.Cache.Common">
+      <HintPath>..\..\..\..\..\DevRelease\bin.debug\CygNet.API.Cache.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="CygNet.API.Core">
+      <HintPath>..\..\..\..\..\DevRelease\bin.debug\CygNet.API.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CygNet.Data.Cache">
+      <HintPath>..\..\..\..\..\DevRelease\bin.debug\CygNet.Data.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="CygNet.Data.Core">
+      <HintPath>..\..\..\..\..\DevRelease\bin.debug\CygNet.Data.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CygNet.Data.Points">
+      <HintPath>..\..\..\..\..\DevRelease\bin.debug\CygNet.Data.Points.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DragDrop\DragDrop.xaml.cs">
+      <DependentUpon>DragDrop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DragDrop\DragDropViewModel.cs" />
+    <Compile Include="PropertyEditors\CustomDialog.xaml.cs">
+      <DependentUpon>CustomDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyEditors\DropDownUserControl.xaml.cs">
+      <DependentUpon>DropDownUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyEditors\PropertiesControl.xaml.cs">
+      <DependentUpon>PropertiesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyEditors\PropertiesControlViewModel.cs" />
+    <Compile Include="Simple\ExampleControl.xaml.cs">
+      <DependentUpon>ExampleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Simple\ExampleControlViewModel.cs" />
+    <Compile Include="Events\ExampleControlWithEvents.xaml.cs">
+      <DependentUpon>ExampleControlWithEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Events\ExampleControlWithEventsViewModel.cs" />
+    <Compile Include="CygNet Aware\ExampleCygNetAwareControl.xaml.cs">
+      <DependentUpon>ExampleCygNetAwareControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CygNet Aware\ExampleCygNetAwareControlViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DragDrop\DragDrop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PropertyEditors\CustomDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PropertyEditors\DropDownUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PropertyEditors\PropertiesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Simple\ExampleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Events\ExampleControlWithEvents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CygNet Aware\ExampleCygNetAwareControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
