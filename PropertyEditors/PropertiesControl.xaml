@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Canvas.Controls.Example.PropertyEditors.PropertiesControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Canvas.Controls.Example.PropertyEditors">
+
+    <UserControl.DataContext>
+        <local:PropertiesControlViewModel x:Name="vm"/>
+    </UserControl.DataContext>
+
+    <StackPanel Orientation="Vertical">
+        <CheckBox Content="Boolean" IsChecked="{Binding Boolean}" />
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="String:  " VerticalAlignment="Center"/>
+            <TextBox Text="{Binding String}" MinWidth="50"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Enum:  " VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding Enumeration}" VerticalAlignment="Center"/>
+        </StackPanel>
+        <TextBlock Text="{Binding Color}" Foreground="{Binding Color}"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Service: " VerticalAlignment="Center"/>
+            <TextBox Text="{Binding Service}" MinWidth="50"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Facility: " VerticalAlignment="Center"/>
+            <TextBox Text="{Binding Facility}" MinWidth="50"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="UDC:    " VerticalAlignment="Center"/>
+            <TextBox Text="{Binding UDC}" MinWidth="50"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Canvas.Controls.Example.ExampleControlWithEvents"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Canvas.Controls.Example"
+             MinHeight="20"
+             MinWidth="75">
+
+    <UserControl.Resources>
+        <Style x:Key="hyperlinkStyle" TargetType="Hyperlink" BasedOn="{StaticResource {x:Type Hyperlink}}">
+            <Setter Property="Foreground" Value="#FF007ACC"/>
+        </Style>
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <local:ExampleControlWithEventsViewModel x:Name="vm"/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <ContentControl VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Hyperlink Click="Hyperlink_Click" Focusable="False" Style="{StaticResource hyperlinkStyle}">
+                <TextBlock Text="{Binding HyperlinkText}" />
+            </Hyperlink>
+        </ContentControl>
+    </Grid>
+</UserControl>
